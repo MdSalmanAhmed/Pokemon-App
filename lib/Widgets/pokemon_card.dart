@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'power_badge.dart';
+
 class PokemonCard extends StatelessWidget {
   const PokemonCard({
     super.key,
@@ -7,12 +9,28 @@ class PokemonCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
+    return Container(
+      decoration: BoxDecoration(
         color: Colors.red,
-        width: double.infinity,
-        height: 200.0,
+        borderRadius: BorderRadius.circular(16.0),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Bulbasaur',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            PowerBadge(text: "fire"),
+            PowerBadge(text: "water"),
+          ],
+        ),
       ),
     );
   }

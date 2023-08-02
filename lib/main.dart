@@ -43,7 +43,11 @@ class MyApp extends StatelessWidget {
                   child: Container(
                     child: GridView(
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2),
+                        crossAxisCount: 2,
+                        childAspectRatio: 4 / 3,
+                        crossAxisSpacing: 8.0,
+                        mainAxisSpacing: 8.0,
+                      ),
                       children: [
                         PokemonCard(),
                         PokemonCard(),
