@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Widgets/pokemon_card.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -43,102 +45,16 @@ class MyApp extends StatelessWidget {
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2),
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            color: Colors.red,
-                            width: double.infinity,
-                            height: 200.0,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            color: Colors.red,
-                            width: double.infinity,
-                            height: 200.0,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            color: Colors.red,
-                            width: double.infinity,
-                            height: 200.0,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            color: Colors.red,
-                            width: double.infinity,
-                            height: 200.0,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            color: Colors.red,
-                            width: double.infinity,
-                            height: 200.0,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            color: Colors.red,
-                            width: double.infinity,
-                            height: 200.0,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            color: Colors.red,
-                            width: double.infinity,
-                            height: 200.0,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            color: Colors.red,
-                            width: double.infinity,
-                            height: 200.0,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            color: Colors.red,
-                            width: double.infinity,
-                            height: 200.0,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            color: Colors.red,
-                            width: double.infinity,
-                            height: 200.0,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            color: Colors.red,
-                            width: double.infinity,
-                            height: 200.0,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            color: Colors.red,
-                            width: double.infinity,
-                            height: 200.0,
-                          ),
-                        ),
+                        PokemonCard(),
+                        PokemonCard(),
+                        PokemonCard(),
+                        PokemonCard(),
+                        PokemonCard(),
+                        PokemonCard(),
+                        PokemonCard(),
+                        PokemonCard(),
+                        PokemonCard(),
+                        PokemonCard(),
                       ],
                     ),
                   ),
