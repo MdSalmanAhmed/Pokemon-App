@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              MyTitle(text: "Pokedex"),
+              MyTitle(text: "Pokedex", color: Colors.red,),
               Expanded(
                 flex: 12,
                 child: Container(
