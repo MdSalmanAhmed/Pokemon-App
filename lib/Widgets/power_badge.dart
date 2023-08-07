@@ -13,10 +13,13 @@ class PowerBadge extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 3.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(26.0),
-        color: Colors.green,
+        color: Colors.white.withOpacity(0.3),
       ),
       padding: EdgeInsets.symmetric(horizontal: 18.0, vertical: 4.0),
-      child: Text(text),
+      child: Text(
+        text,
+        style: TextStyle(color: Colors.white),
+      ),
     );
   }
 }
