@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Widgets/my_title.dart';
 import '../Widgets/pokemon_card.dart';
 
 class HomePage extends StatelessWidget {
@@ -28,13 +29,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Expanded(
-                flex: 1,
-                child: Text(
-                  "Poekdex",
-                  style: TextStyle(fontSize: 34.0, fontWeight: FontWeight.bold),
-                ),
-              ),
+              MyTitle(text: "Pokedex"),
               Expanded(
                 flex: 12,
                 child: Container(

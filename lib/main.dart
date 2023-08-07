@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokemonapp/Pages/details_page.dart';
 
 import 'Pages/home_page.dart';
 import 'Widgets/pokemon_card.dart';
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      home: HomePage(),
+      // home: HomePage(),
+      home: DetailsPage(),
     );
   }
 }
