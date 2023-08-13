@@ -96,7 +96,8 @@ class DetailsPage extends StatelessWidget {
             ),
             Positioned(
               top: 160.0,
-              child: Container(
+              child: Hero(
+                tag: "pokecard1",
                 child: Image.network(
                   'http://www.serebii.net/pokemongo/pokemon/001.png',
                   height: 200.0,

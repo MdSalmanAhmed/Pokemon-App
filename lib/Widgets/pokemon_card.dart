@@ -49,9 +49,12 @@ class PokemonCard extends StatelessWidget {
           Positioned(
             right: 0.0,
             bottom: 0.0,
-            child: Image.network(
-              'http://www.serebii.net/pokemongo/pokemon/001.png',
-              width: 100.0,
+            child: Hero(
+              tag: "pokecard1",
+              child: Image.network(
+                'http://www.serebii.net/pokemongo/pokemon/001.png',
+                width: 100.0,
+              ),
             ),
           ),
         ],
