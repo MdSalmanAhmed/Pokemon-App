@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokemonapp/Pages/details_page.dart';
 
 import 'power_badge.dart';
 
@@ -10,7 +11,13 @@ class PokemonCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => print("boo"),
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => DetailsPage(),
+          ),
+        );
+      },
       child: Stack(
         children: [
           Container(

@@ -29,7 +29,10 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              MyTitle(text: "Pokedex", color: Colors.red,),
+              MyTitle(
+                text: "Pokedex",
+                color: Colors.black,
+              ),
               Expanded(
                 flex: 12,
                 child: Container(
@@ -41,6 +44,10 @@ class HomePage extends StatelessWidget {
                       mainAxisSpacing: 8.0,
                     ),
                     children: [
+                      PokemonCard(),
+                      PokemonCard(),
+                      PokemonCard(),
+                      PokemonCard(),
                       PokemonCard(),
                       PokemonCard(),
                       PokemonCard(),
