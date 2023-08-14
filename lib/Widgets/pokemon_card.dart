@@ -4,8 +4,14 @@ import 'package:pokemonapp/Pages/details_page.dart';
 import 'power_badge.dart';
 
 class PokemonCard extends StatelessWidget {
+  final String name;
+  final List<String> types;
+  final String imageUrl;
   const PokemonCard({
     super.key,
+    required this.name,
+    required this.types,
+    required this.imageUrl,
   });
 
   @override
@@ -34,14 +40,14 @@ class PokemonCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Bulbasaur',
+                    '$name',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 18.0,
                         fontWeight: FontWeight.bold),
                   ),
-                  PowerBadge(text: "fire"),
-                  PowerBadge(text: "water"),
+                  PowerBadge(text: "${types[0]}"),
+                  // PowerBadge(text: "${types[1]}"),
                 ],
               ),
             ),
@@ -52,7 +58,7 @@ class PokemonCard extends StatelessWidget {
             child: Hero(
               tag: "pokecard1",
               child: Image.network(
-                'http://www.serebii.net/pokemongo/pokemon/001.png',
+                '$imageUrl',
                 width: 100.0,
               ),
             ),

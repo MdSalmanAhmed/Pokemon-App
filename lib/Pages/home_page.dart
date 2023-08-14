@@ -48,32 +48,16 @@ class HomePage extends StatelessWidget {
                       crossAxisSpacing: 8.0,
                       mainAxisSpacing: 8.0,
                     ),
-                    itemBuilder: (context, index) => PokemonCard(),
+                    itemBuilder: (context, index) => PokemonCard(
+                      name: "${pokemonData![index]!["name"]}",
+                      types: [
+                        pokemonData![index]!.containsKey("type")
+                            ? "${pokemonData![index]!["type"]![0]}"
+                            : "No Power",
+                      ],
+                      imageUrl: "${pokemonData![index]!["img"]}",
+                    ),
                   ),
-                  // child: GridView(
-                  //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  //     crossAxisCount: 2,
-                  //     childAspectRatio: 4 / 3,
-                  //     crossAxisSpacing: 8.0,
-                  //     mainAxisSpacing: 8.0,
-                  //   ),
-                  //   children: [
-                  //     PokemonCard(),
-                  //     // PokemonCard(),
-                  //     // PokemonCard(),
-                  //     // PokemonCard(),
-                  //     // PokemonCard(),
-                  //     // PokemonCard(),
-                  //     // PokemonCard(),
-                  //     // PokemonCard(),
-                  //     // PokemonCard(),
-                  //     // PokemonCard(),
-                  //     // PokemonCard(),
-                  //     // PokemonCard(),
-                  //     // PokemonCard(),
-                  //     // PokemonCard(),
-                  //   ],
-                  // ),
                 ),
               )
             ],
