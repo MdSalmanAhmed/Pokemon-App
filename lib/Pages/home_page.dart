@@ -56,6 +56,7 @@ class HomePage extends StatelessWidget {
                             : "No Power",
                       ],
                       imageUrl: "${pokemonData![index]!["img"]}",
+                      pokemonMap: pokemonData![index],
                     ),
                   ),
                 ),

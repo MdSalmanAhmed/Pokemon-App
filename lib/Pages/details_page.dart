@@ -6,7 +6,8 @@ import '../Widgets/feature_title_text.dart';
 import '../Widgets/feature_value_text.dart';
 
 class DetailsPage extends StatelessWidget {
-  const DetailsPage({super.key});
+  final Map? data;
+  const DetailsPage({super.key, required this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -32,12 +33,15 @@ class DetailsPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           MyTitle(
-                            text: "text",
+                            text: "${data!["name"]}",
                             color: Colors.white,
                           ),
                           Row(
                             children: [
-                              PowerBadge(text: "Water"),
+                              PowerBadge(
+                                  text: data!.containsKey("type")
+                                      ? "${data!["type"]![0]}"
+                                      : "No Power"),
                               PowerBadge(text: "Fire")
                             ],
                           ),
@@ -80,10 +84,10 @@ class DetailsPage extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                FeatureValueText(text: "height"),
-                                FeatureValueText(text: "weight"),
-                                FeatureValueText(text: "candy"),
-                                FeatureValueText(text: "egg"),
+                                FeatureValueText(text: "${data!["height"]}"),
+                                FeatureValueText(text: "${data!["weight"]}"),
+                                FeatureValueText(text: "${data!["candy"]}"),
+                                FeatureValueText(text: "${data!["egg"]}"),
                               ],
                             ),
                           ),
@@ -97,9 +101,9 @@ class DetailsPage extends StatelessWidget {
             Positioned(
               top: 160.0,
               child: Hero(
-                tag: "pokecard1",
+                tag: "pokecard-${data!["name"]}",
                 child: Image.network(
-                  'http://www.serebii.net/pokemongo/pokemon/001.png',
+                  '${data!["img"]}',
                   height: 200.0,
                   fit: BoxFit.fill,
                 ),

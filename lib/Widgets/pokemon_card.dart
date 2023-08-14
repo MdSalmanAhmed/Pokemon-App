@@ -7,11 +7,13 @@ class PokemonCard extends StatelessWidget {
   final String name;
   final List<String> types;
   final String imageUrl;
+  final Map? pokemonMap;
   const PokemonCard({
     super.key,
     required this.name,
     required this.types,
     required this.imageUrl,
+    required this.pokemonMap,
   });
 
   @override
@@ -20,7 +22,7 @@ class PokemonCard extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => DetailsPage(),
+            builder: (context) => DetailsPage(data: pokemonMap),
           ),
         );
       },
@@ -56,7 +58,7 @@ class PokemonCard extends StatelessWidget {
             right: 0.0,
             bottom: 0.0,
             child: Hero(
-              tag: "pokecard1",
+              tag: "pokecard-${name}",
               child: Image.network(
                 '$imageUrl',
                 width: 100.0,
