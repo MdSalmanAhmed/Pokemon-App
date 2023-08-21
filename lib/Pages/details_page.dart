@@ -31,19 +31,17 @@ class DetailsPage extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           MyTitle(
                             text: "${data!["name"]}",
                             color: Colors.white,
                           ),
                           Row(
-                            children: [
-                              PowerBadge(
-                                  text: data!.containsKey("type")
-                                      ? "${data!["type"]![0]}"
-                                      : "No Power"),
-                              PowerBadge(text: "Fire")
-                            ],
+                            children: data!["type"]
+                                .map<Widget>(
+                                    (item) => PowerBadge(text: "$item"))
+                                .toList(),
                           ),
                           Container(
                             height: 240.0,
